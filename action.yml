@@ -49,12 +49,12 @@ runs:
       uses: subosito/flutter-action@v2
       with:
         channel: "stable"
-        flutter-version: '3.24.5'
+        flutter-version: '3.27.1'
         cache: true
 
     - name: Activate flutterfire
       if: ${{ inputs.flutterfire }} == 'true'
-      run: dart pub global activate flutterfire_cli 0.3.0-dev.19 --overwrite
+      run: dart pub global activate flutterfire_cli --overwrite
       shell: bash
 
     # see https://docs.github.com/en/actions/deployment/deploying-xcode-applications/installing-an-apple-certificate-on-macos-runners-for-xcode-development for more info
